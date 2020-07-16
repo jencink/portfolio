@@ -1,0 +1,62 @@
+
+body {				/*Keeps everything in the viewport*/
+	overflow: hidden;
+	font-family: 'Zilla Slab', serif;
+}
+
+.container {		/*Controls the page grid*/
+	display: grid;
+	height: 100vh;
+	width: 100vw;
+	grid-template-columns: 1fr 3fr;
+	gap: 0;
+	}
+
+.middle { 			/*Conrtols the middle section grid*/
+	display: grid;
+	grid-template-rows: 4em 1fr 3em;
+	overflow: hidden;
+	gap: 0;
+}
+
+#sideBar {
+	background-color: #3399cc;
+	text-align: center;
+}
+#header {
+	border: solid 1px red;
+}
+#main {
+	overflow-y: scroll;
+	padding: 25px;
+	background-color: #ffffff;
+	border: solid 1px green;
+}
+#footer {
+	border: solid 1px yellow;
+}
+#firstLast {
+	background-color: #fff;
+	margin-top: 4em;
+	height: 8em;
+}
+h1 {
+	font-family: 'Domine', serif;
+}
+
+#firstLast>h1{ 
+	color: #3399cc;
+	padding: 15px 0;	
+}
+ul {
+	text-align: left;
+	margin: 20px;
+}
+
+/*	Fonts 
+	font-family: 'Domine', serif;
+	font-family: 'Zilla Slab', serif;
+	
+	Colors
+	background-color: #3399cc;
+*/
