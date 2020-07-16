@@ -1,0 +1,61 @@
+/*
+     Jen Cink
+     final_bistro_screen.css
+     INFO 1311 5A
+     Olberding
+     8/1/19
+*/
+
+body {
+	background-color: #FFFFFF;
+    color: #000000;
+	font-family: Georgia, Times, serif;
+	text-align: center;
+}
+
+#wrapper {
+	margin: 0;
+	padding: 0;
+}
+.print {
+	display: block;
+}
+
+nav {
+	display: none;
+}
+picture{
+	display: none;
+}
+footer a{
+	display:none;
+}
+h2 {
+	font-size: 105%;
+	font-family: Copperplate, "Copperplate Gothic Light", serif;
+}
+h1 {
+	font-family: Copperplate, "Copperplate Gothic Light", serif;
+	text-shadow: 2px 2px #333333;
+}
+main img{
+	display: none;
+	float: right;
+}
+video {
+	display: none;
+}
+ul {
+	list-style-type: none;
+}
+
+/*Form*/
+form{
+	text-align: left;	
+}
+#req {
+	font-size: 12px;
+}
+fieldset {
+	width: 45%;
+}

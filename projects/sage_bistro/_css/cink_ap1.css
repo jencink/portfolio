@@ -1,0 +1,60 @@
+/*
+   Jen Cink
+	cink-ap1.css
+	INFO 2439-WW
+	Thoendel
+	Spring 2020 
+*/
+
+.responsive {
+	width: 100%;
+	max-width: 200px;
+	height: auto;
+  }
+
+.content {
+	margin: auto;
+	padding: auto;
+}
+
+p, address {
+	text-align: center;
+}
+
+.mapouter {
+	padding: auto;
+	margin: auto;
+}
+
+.survey {
+	width: 95%;
+	margin: auto;
+	border: 2px solid #065684;
+	background-color: #d4e2ed;
+	border-top-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+.here { 
+	background-color: #065684;
+}
+
+/*Slide Show*/
+.fling-minislide {
+    width: 100%; 
+    height: 0px; 
+    padding-bottom: 65%;
+    overflow: hidden; 
+    position: relative; 
+}
+.fling-minislide img{ 
+    position: absolute;
+    animation:fling-minislide 20s infinite; 
+    opacity: 0; 
+    width: 100%;
+    height: auto;}
+
+@keyframes fling-minislide {25%{opacity:1;} 40%{opacity:0;}} 
+.fling-minislide img:nth-child(4){animation-delay:0s;}
+.fling-minislide img:nth-child(3){animation-delay:3s;}
+.fling-minislide img:nth-child(2){animation-delay:6s;}
+.fling-minislide img:nth-child(1){animation-delay:9s;}

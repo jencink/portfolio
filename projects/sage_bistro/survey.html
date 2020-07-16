@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Jen Cink | INFO 2430 | Survey</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="_css/cink_ap1.css">		<!--External Stylesheet-->	
+
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+
+	<link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Source+Sans+Pro&display=swap" rel="stylesheet">	<!--Google Font/Icon Stylesheets-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	
+	<link rel="stylesheet" href="./_css/themes/cink-theme.css" />				<!--ThemeRoller Stylesheets-->
+	<link rel="stylesheet" href="./_css/themes/jquery.mobile.icons.min.css" />
+
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.js"></script>
+
+
+</head>
+<body>
+<!--
+	Jen Cink
+	survey.html
+	INFO 2439-WW
+	Thoendel
+	Spring 2020 
+-->
+
+<div data-role="page"> 										<!--Opening Page Div-->
+
+	<div data-role="header" data-position="fixed">				<!--Opening Header Div-->
+		<a href="./home.html" data-ajax="false" data-icon="home" data-iconpos="notext"></a>
+		<h1>Survey</h1>
+		<div data-role="navbar" data-position="fixed">
+			<ul>
+				<li>
+					<a href="./map.html" data-ajax="false">Map</a>
+				</li>
+				<li>
+					<a href="./reserve.html" data-ajax="false">Reserve</a>
+				</li>
+				<li>
+					<a href="./menu.html" data-ajax="false">Menu</a>
+				</li>
+				<li>
+					<a href="#" data-ajax="false">Survey</a>
+				</li>
+			</ul>
+		</div>
+
+	</div>									<!--Closing Header Div-->
+
+	<div data-role="main" class="ui-content">	<!--Opening Main Content Div-->
+
+		<form action="http://emthoendel.faculty.mccinfo.net/2439/bistrosurvey_insert.php" method="post">		<!--Starting Form-->
+
+
+
+			<div class="ui-field-contain">			<!--Select Menu-->
+				<label for="meal_rate">How would you rate your meal today?</label>
+				<select name="meal_rate" id="meal_rate">
+					<option value="5">5 - Excellent</option>
+					<option value="4">4 - Good</option>
+					<option value="3">3 - Fair</option>
+					<option value="2">2 - Needs Work</option>
+					<option value="1">1 - Poor</option>
+				</select>
+			
+			</div>
+
+			<div class="ui-field-contain">			<!--Select Menu-->
+				<label for="service_rate">How would you rate your service today?</label>
+				<select name="service_rate" id="service_rate">
+					<option value="5">5 - Excellent</option>
+					<option value="4">4 - Good</option>
+					<option value="3">3 - Fair</option>
+					<option value="2">2 - Needs Work</option>
+					<option value="1">1 - Poor</option>
+				</select>
+			
+			</div>
+	
+			<div class="ui-field-contain">			<!--Select Menu-->
+				<label for="overall_exp">How would you rate your overall experience today?</label>
+				<select name="overall_exp" id="overall_exp">
+					<option value="5">5 - Excellent</option>
+					<option value="4">4 - Good</option>
+					<option value="3">3 - Fair</option>
+					<option value="2">2 - Needs Work</option>
+					<option value="1">1 - Poor</option>
+				</select>
+			
+			</div>
+
+			<fieldset data-role="controlgroup" data-type="horizontal">	<!--Horizontail Checkbox-->
+				<legend>Would you recommend this restaurant to a friend?</legend>
+				<input type="checkbox" name="recommend_rest" id="yes" value="yes">
+				<label for="yes">Yes</label>
+				<input type="checkbox" name="recommend_rest" id="no" value="no">
+				<label for="no">No</label>
+			</fieldset>
+
+			<div class="ui-field-contain">			<!--Name Field-->
+				<label for="name">Name:</label>
+				<input type="text" name="bname" id="bname" value="" />
+			</div>
+
+			<div class="ui-field-contain">			<!--Email Field-->
+				<label for="email">Email:</label>
+				<input type="text" name="email" id="email" value="">
+			</div>
+
+			<div class="ui-field-contain">				<!--Submit Button-->
+				<input type="submit" name="submit" value="Send" />
+			</div>
+
+		</form>
+
+	</div>									<!--Closing Main Content Div-->
+
+	<div data-role="footer" data-position="fixed">				<!--Opening Footer Div-->
+		<h4>Created by: <a href="mailto:jecink@mail.mccneb.edu">Jen Cink</a></h4>
+	</div>									<!--Closing Footer Div-->
+
+</div>										<!--Closing Page Div-->
+
+</body>
