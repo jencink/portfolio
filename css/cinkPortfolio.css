@@ -10,6 +10,7 @@ body {				/*Keeps everything in the viewport*/
 	width: 100vw;
 	grid-template-columns: 1fr 3fr;
 	gap: 0;
+	margin: -10px;
 	}
 
 .middle { 			/*Conrtols the middle section grid*/
@@ -24,16 +25,15 @@ body {				/*Keeps everything in the viewport*/
 	text-align: center;
 }
 #header {
-	border: solid 1px red;
+	
+	padding-left: 25px;
 }
 #main {
 	overflow-y: scroll;
 	padding: 25px;
 	background-color: #ffffff;
-	border: solid 1px green;
-}
-#footer {
-	border: solid 1px yellow;
+	border: solid 2px #3399cc;
+	
 }
 #firstLast {
 	background-color: #fff;
@@ -43,16 +43,46 @@ body {				/*Keeps everything in the viewport*/
 h1 {
 	font-family: 'Domine', serif;
 }
+.resumeHead {
+	display: block;
+	background-color: #a0d2eb;  
+	margin: -10px; 
+}
 
 #firstLast>h1{ 
 	color: #3399cc;
-	padding: 15px 0;	
+	padding: 1em 0;
 }
 ul {
 	text-align: left;
 	margin: 20px;
+	list-style: none;
 }
-
+a:link {		/*Sidebar Link States*/
+	text-decoration: none;
+	color: #ffffff;
+	font-size: 110%; 
+}
+a:visited {
+	text-decoration: none;
+	color: #bbbbbb;
+}
+a:hover {
+	text-decoration: none;
+	font-weight: bold
+}
+a:active {
+	text-decoration: none;
+	color: #ddd;
+}
+.projectGallery {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+}
+iframe {
+	padding-left: 10%;
+	border: none;
+}
 /*	Fonts 
 	font-family: 'Domine', serif;
 	font-family: 'Zilla Slab', serif;

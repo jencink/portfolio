@@ -1,0 +1,57 @@
+/*This is to hopefully make the fonts work in the app*/
+@font-face {
+    font-family: 'Macondo Swash Caps';
+    src: url('fonts/MacondoSwashCaps.woff') format('woff'),
+         url('fonts/MacondoSwashCaps.ttf') format('truetype'),
+         url('fonts/MacondoSwashCaps.svg#macondo_swash_caps') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('fonts/RobotoSlab.woff') format('woff'),
+         url('fonts/RobotoSlab.ttf') format('truetype'),
+         url('fonts/RobotoSlab.svg#roboto_slab') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Controlling fonts*/
+h1, h2, .ui-btn {
+	font-family: 'Macondo Swash Caps', cursive;
+	color: #320921;
+}
+p, a, li, h3, h4 {
+	font-family: 'Roboto Slab', serif;
+	color: #143f44;
+}
+
+/*CSS for Adventure Planner Page Stuff*/
+/*Twitter Feed*/
+#social {
+	width: 70%;
+	height: 350px;
+	margin: auto;
+	padding: auto;
+}
+#conDetails, #about {
+	text-align: center;
+}
+/*Static map stuff*/
+.mapouter {
+	position:relative;
+	text-align:right;
+	margin: auto;
+	padding: auto;
+	height:350px;
+	width:350px;
+}
+.gmap_canvas {
+	overflow:hidden
+	;background:none!important;
+	margin: auto;
+	padding: auto;
+	height:350px;
+	width:350px;
+}

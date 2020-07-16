@@ -1,0 +1,447 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Robes & Wizard Hats - Character Creation Assistant</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="../www/res/icon/android/favicon-32x32.png"/>	
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.icons.min.css" />	
+
+	<link rel="stylesheet" type="text/css" href="css/cink-robes_wiz-hats.css" />								<!--ThemeRoller Sheets-->
+	<link rel="stylesheet" type="text/css" href="css/cink-aC2.css" />											<!--External Stylesheet-->
+	
+	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+<!--
+	Jen Cink
+	charRace.html
+	INFO 2439-WW
+	Thoendel
+	Spring 2020 
+-->
+<div data-role="page" id="charRace"> 																<!--Opening page Div-->
+
+	<div data-role="header" data-position="fixed">													<!--Opening Header Div-->
+		<a href="index.html" data-ajax="false" data-icon="home">Home</a>
+		<h1>Creation Assistant</h1>
+	</div>																							<!--Closing Header Div-->
+
+	<div data-role="main" class="ui-content">														<!--Opening main Div-->
+
+		<div data-role="collapsible-set" id="accordion">											<!--Opening Accordian-->	
+
+			<div data-role="collapsible">															<!--Races Accordian-->
+				<h2>Races</h2>
+				<p><a href="#dwarf" data-roll="button" data-rel="popup" data-position-to="window">Dwarf</a></p>
+				<p><a href="#elf" data-roll="button" data-rel="popup" data-position-to="window">Elf</a></p>
+				<p><a href="#halfling" data-roll="button" data-rel="popup" data-position-to="window">Halfling</a></p>
+				<p><a href="#human" data-roll="button" data-rel="popup" data-position-to="window">Human</a></p>
+			</div>
+
+			<div data-role="collapsible">															<!--Classes Accordian-->
+				<h2>Classes</h2>
+				<p><a href="#cleric" data-roll="button" data-rel="popup" data-position-to="window">Cleric</a></p>
+				<p><a href="#fighter" data-roll="button" data-rel="popup" data-position-to="window">Fighter</a></p>
+				<p><a href="#rogue" data-roll="button" data-rel="popup" data-position-to="window">Rogue</a></p>
+				<p><a href="#warlock" data-roll="button" data-rel="popup" data-position-to="window">Warlock</a></p>
+			</div>
+
+			<div data-role="collapsible">															<!--Ablilities Accordian-->
+				<p><a href="#strength" data-roll="button" data-rel="popup" data-position-to="window">Strength</a></p>
+				<p><a href="#dexterity" data-roll="button" data-rel="popup" data-position-to="window">Dexterity</a></p>
+				<p><a href="#constitution" data-roll="button" data-rel="popup" data-position-to="window">Constitution</a></p>
+				<p><a href="#intelligence" data-roll="button" data-rel="popup" data-position-to="window">Intelligence</a></p>
+				<p><a href="#wisdom" data-roll="button" data-rel="popup" data-position-to="window">Wisdom</a></p>
+				<p><a href="#charisma" data-roll="button" data-rel="popup" data-position-to="window">Charisma</a></p>
+			</div>
+
+			<div data-role="collapsible">															<!--Alignment Accordian-->
+				<h2>Alignment</h2>
+				<p><a href="#lawfulGood" data-roll="button" data-rel="popup" data-position-to="window">Lawful Good</a></p>
+				<p><a href="#neutralGood" data-roll="button" data-rel="popup" data-position-to="window">Neutral Good</a></p>
+				<p><a href="#chaoticGood" data-roll="button" data-rel="popup" data-position-to="window">Chaotic Good</a></p>
+				<p><a href="#lawfulNeutral" data-roll="button" data-rel="popup" data-position-to="window">Lawful Neutral</a></p>
+				<p><a href="#neutral" data-roll="button" data-rel="popup" data-position-to="window">Neutral</a></p>
+				<p><a href="#chaoticNeutral" data-roll="button" data-rel="popup" data-position-to="window">Chaotic Neutral</a></p>
+				<p><a href="#lawfulEvil" data-roll="button" data-rel="popup" data-position-to="window">Lawful Evil</a></p>
+				<p><a href="#neutralEvil" data-roll="button" data-rel="popup" data-position-to="window">Neutral Evil</a></p>
+				<p><a href="#chaoticEvil" data-roll="button" data-rel="popup" data-position-to="window">Chaotic Evil</a></p>
+			</div>
+
+			<div data-role="collapsible">															<!--Backgrounds Accordian-->
+				<h2>Backgrounds</h2>
+				<p><a href="#acolyte" data-roll="button" data-rel="popup" data-position-to="window">Acolyte</a></p>
+				<p><a href="#criminal" data-roll="button" data-rel="popup" data-position-to="window">Criminal</a></p>
+				<p><a href="#folkHero" data-roll="button" data-rel="popup" data-position-to="window">Folk Hero</a></p>
+				<p><a href="#noble" data-roll="button" data-rel="popup" data-position-to="window">Noble</a></p>
+				<p><a href="#sage" data-roll="button" data-rel="popup" data-position-to="window">Sage</a></p>
+				<p><a href="#soldier" data-roll="button" data-rel="popup" data-position-to="window">Soldier</a></p>
+			</div>	
+
+		</div>																						<!--Closing Accordian-->
+
+		<div data-role="popup" id="dwarf" data-dismissable="false" class="ui-content">				<!--Dwarf Pop-up-->
+			<h2>Dwarf &#45; Hill | Mountain</h2>
+			<ul>
+				<li>Ability Score Increase: Constitution &#43;2</li>
+				<li>Size: Medium</li>
+				<li>Speed: 25 feet, not reduced by heavy armor</li>
+				<li>Darkvision: Ability to see in dim light within 60 feet as if it were bright light and in darkness as if it were dim.</li>
+				<li>Dwarven Resilience: Saving throws against poison, resistance against poison damage.</li>
+				<li>Dwarven Combat Training: Profiency with Battleaxe, Handaxe, light hammer and warhammer.</li>
+				<li>Languages: Dwarvish &amp; Common.</li>
+				<li>Hill Dwarf: Wisdom 	&#43;1 &amp; hit point maximum &#43;1 that increases &#43;1 with every level.</li>
+				<li>Mountain Dwarf: Strength &#43;2 &amp; profiency with light and medium armor.</li>
+				
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>
+
+		<div data-role="popup" id="elf" data-dismissable="false" class="ui-content">				<!--Elf Pop-up-->
+			<h2>Elf &#45; High | Wood | Dark</h2>
+			<ul>
+				<li>Ability Score Increase: Dexterity &#43;2</li>
+				<li>Size: Medium</li>
+				<li>Speed: 30 feet</li>
+				<li>Darkvision: Ability to see in dim light within 60 feet as if it were bright light and in darkness as if it were dim.</li>
+				<li>Keen Senses: Profiency in Perception.</li>
+				<li>Fey Ancestry: Saving throws against being charmed and resistance against magical sleep.</li>
+				<li>Trance: Elves don't need sleep, instead they go into a trance and in 4 hours they gain the same benefit as a human gets from 8 hours of sleep.</li>
+				<li>Languages: Elvish &amp; Common.</li>
+				<li>High Elf: Intelligence &#43;1, profiency with longsword, shortsword, shortbow, and long bow, know 1 wizard cantrip, and one extra language.</li>
+				<li>Wood Elf: Wisdom &#43;1, profiency with longsword, shortsword, shortbow, and long bow, base speed is increased to 35 feet, and can attempt to hide even when only lightly obscured.</li>
+				<li>Dark Elf: Charisma &#43;1, darkvision radius increases to 120 feet, disadvantage on attack rolls and on perception checks in direct sunlight, know the dancinkg lights cantrip, and proficiency with rapiers, shortswords, and hand crossbows.</li>
+			</ul>	
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>
+
+		<div data-role="popup" id="halfling" data-dismissable="false" class="ui-content">			<!--Halfling Pop-up-->
+			<h2>Halfling &#45; Lightfoot | Stout</h2>
+			<ul>
+				<li>Ability Score Increase: Dexterity &#43;2</li>
+				<li>Size: Small</li>
+				<li>Speed: 25 feet</li>
+				<li>Lucky: When a 1 is rolled on the d20 for an attack, ability check, or saving throw, you can reroll and must use the new roll.</li>
+				<li>Brave: Saving throws against being frightened.</li>
+				<li>Halfling Nimbleness: Able to move through the space of any creature that is a size larger than yours.</li>
+				<li>Languages: Halfling &amp; Common.</li>
+				<li>Lightfoot: Charisma &#43;1 &amp; you can attempt to hide even when obscured by a creature that is at least one size larger than you.</li>
+				<li>Stout: Constitution &#43;1 &amp; advantage on saving throws against poison and resistance against poison damage.</li>
+			</ul>
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>
+
+		<div data-role="popup" id="human" data-dismissable="false"  class="ui-content">				<!--Human Pop-up-->
+			<h2>Human</h2>
+			<ul>
+				<li>Ability Score Increase: All abilities &#43;1</li>
+				<li>Size: Medium</li>
+				<li>Speed: 30 feet</li>
+				<li>Languages: Common &amp; one extra language</li>
+			</ul>
+			<a href="" data-rel="back" data-role="button">Dismiss</a>						
+		</div>
+
+		<div data-role="popup" id="cleric" data-dismissable="false" class="ui-content">				<!--Cleric Pop-up-->
+			<h2>Cleric</h2>
+			<p>A preistly champion who wields divine magic in service of a higher power.</p>
+			<ul>
+				<li>Hit Die: d8</li>
+				<li>Primary Ability: Wisdom</li>
+				<li>Saving Throw Proficiences:Wisdom &amp; Charisma</li>
+				<li>Armor and Weapon Profiencies:Light and medium armor, shields, simple weapons</li>
+			</ul>
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>
+
+		<div data-role="popup" id="fighter" data-dismissable="false"  class="ui-content">			<!--Fighter Pop-up-->
+			<h2>Fighter</h2>
+			<p>A master of martial combat, skilled with a variety of weapons and armor.</p>
+			<ul>
+				<li>Hit Die: d10</li>
+				<li>Primary Ability: Strength OR Dexterity</li>
+				<li>Saving Throw Proficiences: Strength &amp; Constitution</li>
+				<li>Armor and Weapon Profiencies: All armor, shields, simple and martial weapons</li>
+			</ul>	
+			<a href="" data-rel="back" data-role="button">Dismiss</a>				
+		</div>
+
+		<div data-role="popup" id="rogue" data-dismissable="false" class="ui-content">				<!--Rogue Pop-up-->
+			<h2>Rogue</h2>
+			<p>A scoundrel who uses stealth and trickery to overcome obstacles and enemies.</p>
+			<ul>
+				<li>Hit Die: d8</li>
+				<li>Primary Ability: Dexterity</li>
+				<li>Saving Throw Proficiences: Dexterity &amp; Intelligence</li>
+				<li>Armor and Weapon Profiencies: Light armor, simple weapons, hand crossbows, longswords, rapiers, shortswords</li>
+			</ul>	
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>
+
+		<div data-role="popup" id="wizard" data-dismissable="false" class="ui-content">				<!--Wizard Pop-up-->
+			<h2>Wizard</h2>
+			<p>A scholarly magic-user capable of manipulating the structures of reality.</p>
+			<ul>
+				<li>Hit Die: d6</li>
+				<li>Primary Ability: Intelligence</li>
+				<li>Saving Throw Proficiences: Intelligence &amp; Wisdom</li>
+				<li>Armor and Weapon Profiencies: Daggers, darts, slngs, quarterstaffs, light crossbows</li>
+			</ul>	
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>
+
+		<div data-role="popup" id="strength" data-dismissable="false" class="ui-content">			<!--Strength Pop-up-->
+			<h2>Strength</h2>
+			<p>
+				Measures: Natural Athleticism, bodily power<br>
+				Important for: Barbarian, fighter, paladin<br>
+				Racial Increases: Mountain Dwarf &#43;2 | Human &#43;1
+			</p>	
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>
+
+		<div data-role="popup" id="dexterity" data-dismissable="false" class="ui-content">			<!--Dexterity Pop-up-->
+			<h2>Dexterity</h2>
+			<p>
+				Measures: Physical agility, reflexes, balance, poise<br>
+				Important for: Monk, ranger, rogue<br>
+				Racial Increases: Elf &#43;2 | Halfling &#43;2 | Human &#43;1
+			</p>	
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>
+
+		<div data-role="popup" id="constitution" data-dismissable="false" class="ui-content">		<!--Constitution Pop-up-->
+			<h2>Constitution</h2>
+			<p>
+				Measures: Health, stamina, vital force<br>
+				Important for: Everyone<br>
+				Racial Increases: Dwarf &#43;2 | Stout Halfling &#43;1 | Human &#43;1
+			</p>	
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>
+
+		<div data-role="popup" id="intelligence" data-dismissable="false" class="ui-content">		<!--Intelligence Pop-up-->
+			<h2>Intelligence</h2>
+			<p>
+				Measures: Mental acuity, information recall, analytical skill<br>
+				Important for: Wizard<br>
+				Racial Increases: High Elf &#43;1 | Human &#43;1
+			</p>	
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>
+
+		<div data-role="popup" id="wisdom" data-dismissable="false" class="ui-content">				<!--Wisdom Pop-up-->
+			<h2>Wisdom</h2>
+			<p>
+				Measures: Awareness, intuition, insight<br>
+				Important for: Cleric, druid<br>
+				Racial Increases: Hill Dwarf &#43;1 | Wood Elf &#43;1 | Human &#43;1
+			</p>	
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>
+
+		<div data-role="popup" id="charisma" data-dismissable="false" class="ui-content">			<!--Charisma Pop-up-->
+			<h2>Charisma</h2>
+			<p>
+				Measures: Confidence, eloquence, leadership<br>
+				Important for: Bard, sorcerer, warlock<br>
+				Racial Increases: Lightfoot Halfling &#43;1| Dark Elf &#43;1 | Human &#43;1
+			</p>	
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>
+
+		<div data-role="popup" id="lawfulGood" data-dismissable="false" class="ui-content">			<!--Lawful Good Pop-up-->
+			<h2>Lawful Good</h2>
+			<p>
+				Creatures that can be counted on to do the right thing as expected by society. Gold dragons, paladins, and most dwarves are lawful good.
+			</p>	
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>
+
+		<div data-role="popup" id="neutralGood" data-dismissable="false" class="ui-content">		<!--Neutral Good Pop-up-->
+			<h2>Neutral Good</h2>
+			<p>
+				Folks do the best they can to help others according to their needs. Many celestials, some cloud gians, and most gnomes are neutral good. 
+			</p>	
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>
+
+		<div data-role="popup" id="chaoticGood" data-dismissable="false" class="ui-content">		<!--Chaotic Good Pop-up-->
+			<h2>Chaotic Good</h2>
+			<p>
+				Creatures act as their conscience directs, with little regard for what others expect. Copper dragons, many elves and unicorns are chaotic good. 
+			</p>	
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>
+
+		<div data-role="popup" id="lawfulNeutral" data-dismissable="false" class="ui-content">		<!--Lawful Neutral Pop-up-->
+			<h2>Lawful Neutral</h2>
+			<p>
+				Individuals act in accordance with law, tradition, or personal codes. Many monks and some wizards are lawful neutral. 
+			</p>	
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>
+
+		<div data-role="popup" id="neutral" data-dismissable="false" class="ui-content">			<!--Neutral Pop-up-->
+			<h2>Neutral</h2>
+			<p>
+				The alignment of those who prefer to steer clear of moral questions and don't take sides, doing what seems best at the time. Lizardfolk, most druids, and many humans are neutral. 
+			</p>	
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>		
+
+		<div data-role="popup" id="chaoticNeutral" data-dismissable="false" class="ui-content">		<!--Chaotic Neutral Pop-up-->
+			<h2>Chaotic Neutral</h2>
+			<p>
+				Creatures follow their whims, holding their personal freedom above all else. Many barbarians and rogues, and some bards are chaotic neutral. 
+			</p>	
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>
+
+		<div data-role="popup" id="lawfulEvil" data-dismissable="false" class="ui-content">			<!--Lawful Evil Pop-up-->
+			<h2>Lawful Evil</h2>
+			<p>
+				Creatures methodically take what they want, within the limits of a code of tradition, loyalty, or order. Devils, blue dragons, and hobgoblins are lawful evil. 
+			</p>	
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>
+
+		<div data-role="popup" id="neutralEvil" data-dismissable="false" class="ui-content">		<!--Neutral Evil Pop-up-->
+			<h2>Neutral Evil</h2>
+			<p>
+				The alignment for those who do whatever they can get away with, without compassion or qualms. Many drow, some cloud gians, and yugoloths are neutral evil. 
+			</p>	
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>
+
+		<div data-role="popup" id="chaoticEvil" data-dismissable="false" class="ui-content">		<!--Chaotic Evil Pop-up-->
+			<h2>Chaotic Evil</h2>
+			<p>
+				Creatures act with aritrary violence, spurred by their greed, hatred, or bloodlust. Demons, red dragons, and orcs are chaotic evil.
+			</p>	
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>
+
+		<div data-role="popup" id="acolyte" data-dismissable="false" class="ui-content">			<!--Acolyte Pop-up-->
+			<h2>Acolyte</h2>
+			<ul>
+				<li>Skill Profiences: Insight, Religion</li>
+				<li>Languages: 2 of your choice</li>
+				<li>Equipment:
+					<ul>
+						<li>A holy symbol</li>
+						<li>A prayer book or prayer wheel</li>
+						<li>5 sticks of incense</li>
+						<li>Vestments</li>
+						<li>A set of common clothes</li>
+						<li>A pouch containing 15 gp</li>
+					</ul>
+				</li>
+			</ul>
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>
+
+		<div data-role="popup" id="criminal" data-dismissable="false" class="ui-content">			<!--Criminal Pop-up-->
+			<h2>Criminal</h2>
+			<ul>
+				<li>Skill Profiences: Deception, Stealth</li>
+				<li>Tool Profiencies: One type of gaming set, thieves tools</li>
+				<li>Equipment:
+					<ul>
+						<li>A crowbar</li>
+						<li>A set of dark common clothes including a hood</li>
+						<li>A pouch containing 15 gp</li>
+					</ul>
+				</li>
+			</ul>	
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>	
+		
+		<div data-role="popup" id="folkHero" data-dismissable="false" class="ui-content">			<!--Folk Hero Pop-up-->
+			<h2>Folk Hero</h2>
+			<ul>
+				<li>Skill Profiences: Animal Handling, Survival</li>
+				<li>Tool Profiencies: One type of artisan's tools, land vehicles</li>
+				<li>Equipment:
+					<ul>
+						<li>A set of artisan's tools of your choice</li>
+						<li>A shovel</li>
+						<li>An iron pot</li>
+						<li>A set of common clothes</li>
+						<li>A pouch containing 10 gp</li>
+					</ul>
+				</li>
+			</ul>	
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>
+
+		<div data-role="popup" id="noble" data-dismissable="false" class="ui-content">				<!--Noble Pop-up-->
+			<h2>Noble</h2>
+			<ul>
+				<li>Skill Profiences: History, Persuasion</li>
+				<li>Tool Profiencies: One type of gaming set</li>
+				<li>Languages:  One of your choice</li>
+				<li>Equipment:
+					<ul>
+						<li>A set of fine clothes</li>
+						<li>A signet ring</li>
+						<li>A scroll of pedigree</li>
+						<li>A purse containing 25 gp</li>
+					</ul>
+				</li>
+			</ul>	
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>
+
+		<div data-role="popup" id="sage" data-dismissable="false" class="ui-content">				<!--Sage Pop-up-->
+			<h2>Sage</h2>
+			<ul>
+				<li>Skill Profiences: Arcana, History</li>
+				<li>Languages:  Two of your choice</li>
+				<li>Equipment:
+					<ul>
+						<li>A bottle of black ink</li>
+						<li>A quill</li>
+						<li>A small knife</li>
+						<li>A letter from a dead colleague posing a question you have not yet been able to answer</li>
+						<li>A set of common clothes</li>
+						<li>A pouch containing 10 gp</li>
+					</ul>
+				</li>
+			</ul>	
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>
+
+		<div data-role="popup" id="soldier" data-dismissable="false" class="ui-content">			<!--Soldier Pop-up-->
+			<h2>Soldier</h2>
+			<ul>
+				<li>Skill Profiences: Athletics, Intimidation</li>
+				<li>Tool Profiencies: One type of gaming set, land vehicles</li>
+				<li>Equipment:
+					<ul>
+						<li>An insignia of rank</li>
+						<li>A trophy taken from a fallen enemy</li>
+						<li>A set of bone dice or deck of cards</li>
+						<li>A set of common clothes</li>
+						<li>A pouch containing 10 gp</li>
+					</ul>
+				</li>
+			</ul>	
+			<a href="" data-rel="back" data-role="button">Dismiss</a>					
+		</div>
+	
+	</div>																							<!--Closing main Div-->
+
+	<div data-role="footer" data-position="fixed">													<!--Opeing footer Div-->			
+		<h3><a href="about.html" data-ajax="false">About</a></h3>
+	</div>																							<!--Closing footer div-->
+
+</div>																								<!--Closing Page Div-->
+
+	
+</body>
+
+</body>

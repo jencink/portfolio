@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>The Bistro Cafe - Contact Us</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="bistro_print.css" media="print">
+	<link rel="stylesheet" href="bistro_screen.css" media="screen">
+</head>
+<!-- Jen Cink
+     final_contact.html
+     INFO1311.5A
+     Olberding
+     7/31/19
+-->
+<body>
+<div id="wrapper">
+<header>
+	<picture>
+		<source media="(min-width: 769px)" srcset="Media/logo.png">
+		<source media="(max-width: 768px)" srcset="Media/logo_small.png">
+		<img src="Media/logo.png" alt="The Bistro Cafe">
+	</picture>
+	<div class="print">
+		<img src="Media/logo_print.png" width="497" height="71" alt="The Bistro Cafe">
+	</div>
+	<!-- Logo created from a graphic I had previously purchased on CreativeMarket.com. 
+	Per the licensing agreement, I can use this for personal use. -->
+
+</header>
+
+<nav>
+	<ul>
+		<li><a href="final_home.html">Home</a></li>
+		<li><a href="history.html">History</a></li>
+		<li><a href="specials.html">Specials</a></li>
+		<li><a href="contact.html">Contact Us</a></li>
+	</ul>
+</nav>
+<main>
+	<h1>Contact Us</h1>
+<p>Your information will not be sold and will only be used for email marketing purposes if you select that option. 
+	Please note you will only receive one to two emails a month containing coupons, recipes and information about upcoming
+	specials and events.</p>	
+<!--This is the opening form tag.-->
+<form action="https://www.mccinfo.net/webresources/cgi-bin/formmail.asp" method="post"> 
+<input type="hidden" name="recipient" value="lolberding@mccneb.edu">  
+<!--Email Subject-->
+<input type="hidden" name="subject" value="Contact Us Form"
+<!-- Return Page-->
+<input name="redirect" type="hidden" value="http://student.mccinfo.net/~jecink/final/formcomplete.html">
+<p id="req">&#42; Required</p>
+
+<table>
+	<tr>
+		<td>First Name:</td>
+		<td><input type="text" id="firstName" name="firstName" size="30"></td>
+	</tr>
+	<tr>
+		<td>Last Name*:</td>
+		<td><input type="text" id="lastName" name="lastName" size="30" required></td>
+	</tr>
+	<tr>
+		<td>Email*:</td>
+		<td><input type="email" id="email" name="email" size="30" required></td>
+	</tr>
+	<tr>
+		<td>Phone Number:</td>
+		<td><input type="tel" id="phone" name="phone" size="30" required>
+	</tr>
+</table>
+<fieldset>
+<legend>How would you like to be contacted?</legend>
+	<ul>
+		<li><input type="checkbox" name="contact" id="byEmail" value="byEmail" checked> Email</li>
+		<li><input type="checkbox" name="contact" id="byPhone" value="By Phone"> Phone</li>
+	</ul>
+</fieldset>
+	<p>Do you have any questions, comments or suggestions?<br>
+	We'd love to hear it below.</p>
+<textarea name="comments" id="comments" rows="4" cols="50"></textarea>
+	
+<p id="buttons">
+	<input type="submit" value="Submit"> 
+	&nbsp;
+	<input type="reset" value="Clear Form"></p>
+</form>	
+	<h2>510 Hypertext Avenue<br>
+	Techieville, KB 68512<br>
+	555-512-1024</h2>
+</main>
+
+<footer>
+	<a href="final_home.html">Home</a>&nbsp;<a href="history.html">History</a>&nbsp;<a href="specials.html">Specials</a>&nbsp;<a href="contact.html">Contact Us</a>
+	<p> &copy;2019&nbsp;<a href="mailto:jecink@mail.mccneb.edu">jecink@mail.mccneb.edu</a></p>
+</footer>
+
+</div>
+</body>
+</html>

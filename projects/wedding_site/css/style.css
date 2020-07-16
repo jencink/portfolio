@@ -1,0 +1,224 @@
+.banner { 
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    align: center;
+    left: 0px;
+    padding: 0;
+    padding-bottom: 5px;
+    background-color: #033666;
+    z-index:9999;
+}
+table.banner {
+    border: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 103%;
+    height: 3vw;
+    border-bottom: thick solid #F20024;
+
+}
+img.banner {
+    width: 35%; 
+    object-fit: contain;
+    border: none;
+}
+th {
+    align: center;
+    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+    font-weight: bold;
+    font-size: 20px;
+    font-size: 2.5vw;
+    padding: 0px 5px 0px 5px;			
+}
+.faq {
+    display: none;
+}			
+.link {
+    top: 150;
+}
+p.link {
+    height: 10vw;
+}
+h1 {
+    font-size: 3vw;
+}
+
+body {
+    padding: 0;
+    width: 100%;
+    background-color: #BFFAFF;
+    color: #033666;
+    background: linear-gradient(90deg, rgba(215, 250, 255, 1) 50%, rgba(191, 250, 255, 1) 50%, rgba(191, 250, 255, 1) 0), #ccc;
+    background-size:50px auto;
+}
+.body { 
+    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+    font-size: 2.5vw;
+    margin: auto;
+    width: 90%;
+    text-align: center;
+    align: center;
+    padding: 1vw;
+}
+table.body{
+    width: 100%;			
+}
+td {
+    padding: 10px;
+}
+a.banner:link {
+    color: #BFFAFF ;
+    text-decoration: none;
+}
+
+a.banner:visited {
+    color: #BFFAFF ;
+    text-decoration: none;
+}
+
+a.banner:hover {
+    color: #F20024 ;
+    text-decoration: none;
+}
+
+a.banner:active {
+    color: #F20024 ;
+    text-decoration: none;
+}
+img.body {
+    width: 100%; 
+    object-fit: contain;
+}
+hr {
+    padding: 0;
+    border: none;
+    height: 5px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(242, 0, 36, 1), rgba(0,0,0,0));
+    background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(242, 0, 36, 1), rgba(0,0,0,0));
+    background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(242, 0, 36, 1), rgba(0,0,0,0));
+    background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(242, 0, 36, 1), rgba(0,0,0,0));
+    color: #F20024;
+    text-align: center;
+}		
+hr:after {
+    content:" ";
+    display: inline-block;
+    position: relative;
+    top: -0.94em;
+    font-size: 1.5em;
+    padding: 19px 1.75em;
+    /*background: url(fleur-de-lis.png) no-repeat scroll center;*/
+    background-size: 90px 90px;
+    height: 50px;
+}
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #033666;
+    border: none;
+    color: #BFFAFF;
+    text-align: center;
+    font-size: 2.5vw;
+    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+    padding: 20px;
+    width: 70%;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+/**
+    * Beveled corners & negative border-radius with CSS gradients
+    */
+.outside-ticket {
+    padding-left: 25%;
+    padding-right: 25%;
+}
+
+.table-ticket {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.ticket {
+    background: #033666; /* fallback */
+    background-size: calc(100% - 5px);
+    background:
+        linear-gradient(135deg, transparent 10px, #033666 0) top left,
+        linear-gradient(225deg, transparent 10px, #033666 0) top right,
+        linear-gradient(315deg, transparent 10px, #033666 0) bottom right,
+        linear-gradient(45deg,  transparent 10px, #033666 0) bottom left;
+    background-size: 51% 51%;
+    background-repeat: no-repeat;
+    padding: 5px;
+    padding-top: 7px;
+}
+
+
+div.ticket {
+    background-image:
+        radial-gradient(circle at 0 0, rgba(242, 0, 36, 1) 14px, #033666 15px),
+        radial-gradient(circle at 100% 0, rgba(242, 0, 36, 1) 14px, #033666 15px),
+        radial-gradient(circle at 100% 100%, rgba(242, 0, 36, 1) 14px, #033666 15px),
+        radial-gradient(circle at 0 100%, rgba(242, 0, 36, 1) 14px, #033666 15px);
+}
+
+img.ticket {
+    width: 95%; 
+    object-fit: contain;
+}
+
+
+
+.fling-minislide {
+    width:100%; 
+    height:0px; 
+    padding-bottom: 65%;
+    overflow:hidden; 
+    position:relative; 
+}
+.fling-minislide img{ 
+    position:absolute;
+    animation:fling-minislide 20s infinite; 
+    opacity:0; 
+    width: 100%;
+    height: auto;}
+
+@keyframes fling-minislide {25%{opacity:1;} 40%{opacity:0;}} 
+.fling-minislide img:nth-child(4){animation-delay:0s;}
+.fling-minislide img:nth-child(3){animation-delay:5s;}
+.fling-minislide img:nth-child(2){animation-delay:10s;}
+.fling-minislide img:nth-child(1){animation-delay:15s;}
+
+
+
+
+
+
+

@@ -1,0 +1,127 @@
+ /*
+     Jen Cink
+     final_bistro_screen.css
+     INFO 1311 5A
+     Olberding
+     8/1/19
+*/
+
+body{
+	margin: 0;
+	font-family: Georgia, Times, serif;
+	color: #545FAF;
+	background: repeating-linear-gradient(to right, #FFFFFF 0px, #FFFFFF 10px, #B1E8E5 10px, #B1E8E5 50px)
+}
+
+#wrapper{
+	margin: 5px 40px 0 40px;
+	border: 2px outset #3F4883;
+	text-align: center;
+	background: white;
+	border-radius: 10px;
+}
+.print{
+	display: none;
+}
+header {
+	padding: 5px;
+}
+main{
+	width: 85%;
+	margin: auto;
+}
+footer {
+	text-align: center;
+	color: #B1E8E5;
+	background: #545FAF;
+	padding: .3em;
+	border-top: 5px double #3F4883;
+}
+h1 {
+	color: #F96B6A;
+	font-family: Copperplate,"Copperplate Gothic Light", serif;
+	text-shadow: 2px 2px #B1E8E5;
+}
+h2 {
+	color: #3F4883;
+	font-size: 105%;
+	font-family: Copperplate, "Copperplate Gothic Light", serif;
+	margin-top: 50px;
+}
+main img{
+	padding: 5px;
+	float: right;
+	display: inline;
+}
+
+/*nav*/
+nav {
+	background: #545FAF;
+
+}
+ul{
+	list-style-type: none;
+}
+nav li{
+	display: inline-block;	
+	font-size: 24px;
+	padding: 10px 10px;
+	text-transform: uppercase;
+}
+
+/*Anchors*/
+a{
+	color: #fff;
+}
+a:link{
+	text-decoration: none;
+	color: #B1E8E5;	
+}
+a:active{
+	color: #F96b6a;
+}
+a:visited{
+	color: #B1E8E5;
+}
+nav a:hover{
+	background: #B1E8E5;
+	color: #3F4883; 
+	padding: 10px 0;
+	text-shadow: 1px 1px #FFFFFF;	
+}
+footer a:hover{
+	text-decoration: underline;
+}
+
+/*Form*/
+form{
+	text-align: left;	
+}
+#req {
+	font-size: 12px;
+	color: #F96B6A;
+}
+fieldset {
+	width: 45%;
+}
+
+/*Media Query for Small Screen*/
+@media only screen and (max-width: 768px) {
+	#wrapper {
+		margin: 0;
+	}
+	nav li{
+		display: block;
+	}
+	nav a:hover{
+		background: #B1E8E5;
+		color: #3F4883; 
+		margin:70px;
+	}
+	h1{
+		font-size: 115%
+		}
+	h2 {
+		font-size: 90%;
+	}
+}
