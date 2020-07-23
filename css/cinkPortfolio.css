@@ -75,16 +75,18 @@ a:active {
 	text-decoration: none;
 	color: #ddd;
 }
-#main > a:link {		/*Main Link States*/
+.projectDescription a:link {		/*Main Link States*/
+	color: #3399cc;
+	font-weight: bold;	
+}
+.projectDescription a:visited {
 	color: #3399cc;
 }
-#main > a:visited {
-	color: #3399cc;
-}
-#main > a:hover {
-	color: #3399cc;
+.projectDescription a:hover {
+	color: #bbbbbb;
+	font-weight: bold;
 } 
-#main > a:active{
+.projectDescription a:active{
 	color: #3399cc;
 }
 .projectGallery {
