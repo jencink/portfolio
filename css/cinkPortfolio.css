@@ -58,7 +58,7 @@ ul {
 	margin: 20px;
 	list-style: none;
 }
-a:link {		/*Sidebar Link States*/
+a:link {
 	text-decoration: none;
 	color: #ffffff;
 	font-size: 110%; 
@@ -74,6 +74,18 @@ a:hover {
 a:active {
 	text-decoration: none;
 	color: #ddd;
+}
+#main > a:link {		/*Main Link States*/
+	color: #3399cc;
+}
+#main > a:visited {
+	color: #3399cc;
+}
+#main > a:hover {
+	color: #3399cc;
+} 
+#main > a:active{
+	color: #3399cc;
 }
 .projectGallery {
 	display: grid;
